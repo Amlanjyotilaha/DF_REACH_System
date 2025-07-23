@@ -63,7 +63,8 @@ Here's a high-level look at some of the primary tables:
 
 ### Relationship Diagram (Conceptual)
 
-A detailed ERD (Entity-Relationship Diagram) will be added here soon, visually representing the table relationships. For now, please refer to the `Ref` statements in the schema definition for foreign key relationships.
+<img width="4470" height="2101" alt="df_reach database" src="https://github.com/user-attachments/assets/7cf3a36f-1cc0-4910-b255-8e739560dddd" />
+
 
 [🔝 Top](#-table-of-contents)
 
