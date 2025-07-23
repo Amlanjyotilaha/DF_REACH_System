@@ -1,4 +1,4 @@
-<p align="center">
+[DF REACH SRC Infographics.pdf](https://github.com/user-attachments/files/21387870/DF.REACH.SRC.Infographics.pdf)<p align="center">
 <img width="200" height="200" alt="DF Reach Logo crop" src="https://github.com/user-attachments/assets/5b49f178-57a7-47f8-87cb-ea87c6e9bf40" />
 </p>
 
@@ -7,6 +7,11 @@
 
 
 A comprehensive database schema for **REACH**, a robust Beneficiary Program Management System.
+
+
+# 🧾 DF_REACH System Overview
+![DF REACH SRC Infographics_page-0001](https://github.com/user-attachments/assets/5ad55373-8961-4be5-b727-c4b34e4f4185)
+
 
 ---
 
