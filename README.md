@@ -1,6 +1,7 @@
 <p align="center">
-<img width="200" height="200" alt="DF Reach Logo crop" src="https://github.com/user-attachments/assets/9bc4dbd0-f2ac-4f56-b272-33d866263942" />
+<img width="200" height="200" alt="DF Reach Logo crop" src="https://github.com/user-attachments/assets/5b49f178-57a7-47f8-87cb-ea87c6e9bf40" />
 </p>
+
 
 # REACH: Beneficiary Program Management System
 
