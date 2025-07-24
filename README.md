@@ -147,11 +147,17 @@ Each table is well-documented for:
 
 
 User (ReactJS) ➝ API (Axios ➝ Express.js)
-    ⮡ Auth (JWT)
-    ⮡ Validate (express-validator)
-    ⮡ Files (Multer)
-    ⮡ DB Ops (MySQL)
-    ⮡ Notify (Nodemailer)
+    
+  #####  ⮡ Auth (JWT)
+   
+  #####  ⮡ Validate (express-validator)
+   
+   ##### ⮡ Files (Multer)
+   
+   ##### ⮡ DB Ops (MySQL)
+   
+   ##### ⮡ Notify (Nodemailer)
+   
 ⬅ Response (JSON) ➝ UI Update (SweetAlert2)
 
 
