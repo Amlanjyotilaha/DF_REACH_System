@@ -3,7 +3,7 @@
 </p>
 
 
-# REACH: Beneficiary Program Management System
+# REACH: Registration, Engagement and Analytics for Community Help
 
 
 A comprehensive database schema for **REACH**, a robust Beneficiary Program Management System.
