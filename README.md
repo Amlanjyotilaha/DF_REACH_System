@@ -112,6 +112,12 @@ This modular architecture ensures **security, maintainability**, and **scalabili
 
 ### 5.1 Database Overview
 
+## DF Reach Database Schema Screenshot
+<img width="4470" height="2101" alt="df_reach database" src="https://github.com/user-attachments/assets/e73d8153-057f-4462-b51c-7f0ee9279c29" />
+
+
+[View Interactive Schema on dbdiagram.io](https://dbdiagram.io/d/df_reach-database-686d004bf413ba3508d3e70d)
+
 - Supports: Beneficiaries, Programs, Employees, Geography
 - Ensures: Data integrity, relations (FK/PK), indexing
 
