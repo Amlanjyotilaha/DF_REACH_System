@@ -1,0 +1,47 @@
+SELECT 
+    C.TABLE_NAME AS 'Table',
+    C.COLUMN_NAME AS 'Column',
+    C.COLUMN_TYPE AS 'Data Type',
+    C.IS_NULLABLE AS 'Is Nullable',
+    C.COLUMN_DEFAULT AS 'Default Value',
+    CASE 
+        WHEN C.COLUMN_KEY = 'PRI' THEN 'PK'
+        WHEN C.COLUMN_KEY = 'MUL' AND KCU.REFERENCED_TABLE_NAME IS NOT NULL THEN 'FK'
+        ELSE C.COLUMN_KEY
+    END AS 'Key',
+    C.EXTRA AS 'Extra',
+    CASE 
+        WHEN T.TABLE_TYPE = 'BASE TABLE' THEN 'TBL'
+        WHEN T.TABLE_TYPE = 'VIEW' THEN 'VW'
+    END AS 'Type',
+    CASE 
+        WHEN S.INDEX_NAME IS NOT NULL THEN 'YES'
+        ELSE 'NO'
+    END AS 'Is Indexed',
+    KCU.CONSTRAINT_NAME AS 'Foreign Key Constraint Name',
+    KCU.REFERENCED_TABLE_NAME AS 'Referenced Table',
+    KCU.REFERENCED_COLUMN_NAME AS 'Referenced Column'
+    
+FROM 
+    information_schema.COLUMNS C
+JOIN 
+    information_schema.TABLES T
+    ON C.TABLE_NAME = T.TABLE_NAME
+    AND C.TABLE_SCHEMA = T.TABLE_SCHEMA
+LEFT JOIN 
+    information_schema.KEY_COLUMN_USAGE KCU
+    ON C.TABLE_NAME = KCU.TABLE_NAME
+    AND C.COLUMN_NAME = KCU.COLUMN_NAME
+    AND C.TABLE_SCHEMA = KCU.TABLE_SCHEMA
+    AND KCU.REFERENCED_TABLE_NAME IS NOT NULL  /*<----- Ensures we only get actual FKs*/
+LEFT JOIN (
+    SELECT DISTINCT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, INDEX_NAME
+    FROM information_schema.STATISTICS
+) S
+    ON C.TABLE_SCHEMA = S.TABLE_SCHEMA
+    AND C.TABLE_NAME = S.TABLE_NAME
+    AND C.COLUMN_NAME = S.COLUMN_NAME
+WHERE 
+    C.TABLE_SCHEMA = 'df_reach'    /*<------------- Change to your schema name */
+ORDER BY 
+    C.TABLE_NAME, C.COLUMN_NAME;
